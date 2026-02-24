@@ -1,0 +1,22 @@
+[project]
+name = "voiceclone"
+version = "0.1.0"
+description = "Voice cloning using Qwen TTS models"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dashscope>=1.20.0",
+    "requests>=2.31.0",
+    "pyaudio>=0.2.14",
+]
+
+[project.scripts]
+voiceclone = "src.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
